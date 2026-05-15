@@ -519,3 +519,42 @@ footer {
 }
 
 
+.award-box-detailed {
+    margin-top: 15px;
+}
+.award-entry {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+.award-entry i {
+    color: #ffb400;
+    margin-right: 12px;
+    margin-top: 4px;
+    min-width: 20px;
+}
+.cert-list-detailed {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+.cert-list-detailed li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+.cert-list-detailed li::before {
+    content: "\f00c"; /* FontAwesome check icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #ffb400;
+    font-size: 0.8rem;
+}
+
+
