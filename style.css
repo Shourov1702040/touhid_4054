@@ -557,6 +557,7 @@ footer {
     font-size: 0.8rem;
 }
 
+
 /* ==========================================
    RESEARCH & CITATIONS SIDE-BY-SIDE LAYOUT 
    ========================================== */
@@ -566,18 +567,24 @@ footer {
     grid-template-columns: 1.2fr 0.8fr !important;
     gap: 2rem !important;
     margin-bottom: 50px !important;
-    align-items: start !important; /* <--- CHANGED THIS: Forces both boxes to only take up their required height */
+    align-items: start !important; /* Content-driven shrinking */
+}
+
+.interests-container, 
+.citations-container {
+    background: white !important;
+    padding: 24px 30px !important; /* Reduced vertical padding inside cards */
+    border-radius: 15px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+    border-top: 4px solid var(--primary) !important;
+    margin-bottom: 0px !important;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 .citations-container {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--primary);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start !important; /* Pulls elements closely together */
+    gap: 15px !important; /* Uniform, tight spacing between items */
 }
 
 /* Flexbox Bar Chart Layout */
@@ -585,12 +592,12 @@ footer {
     display: flex !important;
     justify-content: space-around !important;
     align-items: flex-end !important;
-    height: 150px !important; /* Fixed height for the chart area */
-    padding: 20px 10px 10px 10px !important;
+    height: 120px !important; /* Reduced from 150px to make it more compact */
+    padding: 20px 10px 8px 10px !important;
     border-bottom: 2px solid #e2e8f0 !important;
-    margin-bottom: 15px !important;
-    background: #fafafa;
-    border-radius: 8px;
+    background: #fafafa !important;
+    border-radius: 8px !important;
+    margin-bottom: 0 !important;
 }
 
 .chart-bar-wrapper {
@@ -599,15 +606,15 @@ footer {
     align-items: center !important;
     height: 100% !important;
     justify-content: flex-end !important;
-    width: 40px;
+    width: 40px !important;
 }
 
 .chart-bar {
     background: var(--primary) !important;
-    width: 24px !important; /* Bar thickness */
+    width: 24px !important; 
     border-radius: 4px 4px 0 0 !important;
     position: relative !important;
-    min-height: 5px; /* Ensures a bar is visible even if value is low */
+    min-height: 5px !important; 
 }
 
 /* Value label on top of each bar */
@@ -625,7 +632,7 @@ footer {
 .bar-label {
     font-size: 0.8rem !important;
     color: var(--grey) !important;
-    margin-top: 8px !important;
+    margin-top: 6px !important;
     font-weight: 600 !important;
 }
 
@@ -634,12 +641,12 @@ footer {
     display: flex !important;
     justify-content: space-between !important;
     gap: 8px !important;
-    margin-top: 10px !important;
+    margin-top: 0 !important;
 }
 
 .stat-pill {
     background: #f1f5f9 !important;
-    padding: 8px 6px !important;
+    padding: 6px 4px !important; /* Tighter internal pill padding */
     border-radius: 8px !important;
     font-size: 0.8rem !important;
     color: var(--dark) !important;
@@ -652,6 +659,8 @@ footer {
 @media (max-width: 768px) {
     .research-overview-grid {
         grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
     }
 }
+
 
