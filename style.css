@@ -587,19 +587,6 @@ footer {
     gap: 15px !important; /* Uniform, tight spacing between items */
 }
 
-/* Flexbox Bar Chart Layout */
-.citation-chart {
-    display: flex !important;
-    justify-content: space-around !important;
-    align-items: flex-end !important;
-    height: 120px !important; /* Reduced from 150px to make it more compact */
-    padding: 20px 10px 8px 10px !important;
-    border-bottom: 2px solid #e2e8f0 !important;
-    background: #fafafa !important;
-    border-radius: 8px !important;
-    margin-bottom: 58px !important;
-}
-
 .citation-chart {
     display: flex !important;
     justify-content: space-around !important;
