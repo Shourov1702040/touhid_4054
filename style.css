@@ -566,30 +566,26 @@ footer {
     grid-template-columns: 1.2fr 0.8fr !important;
     gap: 2rem !important;
     margin-bottom: 50px !important;
-    align-items: stretch !important; /* Forces equal heights on the grid items */
+    align-items: stretch !important; /* Forces grid tracks to have equal height */
 }
 
-.interests-container {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--primary);
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Tells the container to expand fully */
-}
-
+/* Force both containers to share identical dimensions and card styles */
+.interests-container, 
 .citations-container {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--primary);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%; /* Tells the container to expand fully */
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important; /* Forces the white cards to fill the grid track height perfectly */
+    background: white !important;
+    padding: 30px !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+    border-top: 4px solid var(--primary) !important;
+    margin-bottom: 0px !important; /* Removes any individual bottom margin differences */
+}
+
+/* Specific inner spacing for the citations side */
+.citations-container {
+    justify-content: space-between !important; 
 }
 
 /* Flexbox Bar Chart Layout */
@@ -597,12 +593,12 @@ footer {
     display: flex !important;
     justify-content: space-around !important;
     align-items: flex-end !important;
-    height: 150px !important; /* Fixed height for the chart area */
+    height: 150px !important; 
     padding: 20px 10px 10px 10px !important;
     border-bottom: 2px solid #e2e8f0 !important;
     margin-bottom: 15px !important;
-    background: #fafafa;
-    border-radius: 8px;
+    background: #fafafa !important;
+    border-radius: 8px !important;
 }
 
 .chart-bar-wrapper {
@@ -611,18 +607,17 @@ footer {
     align-items: center !important;
     height: 100% !important;
     justify-content: flex-end !important;
-    width: 40px;
+    width: 40px !important;
 }
 
 .chart-bar {
     background: var(--primary) !important;
-    width: 24px !important; /* Bar thickness */
+    width: 24px !important; 
     border-radius: 4px 4px 0 0 !important;
     position: relative !important;
-    min-height: 5px; /* Ensures a bar is visible even if value is low */
+    min-height: 5px !important; 
 }
 
-/* Value label on top of each bar */
 .chart-bar span {
     position: absolute !important;
     top: -22px !important;
@@ -633,7 +628,6 @@ footer {
     color: var(--dark) !important;
 }
 
-/* Year label below each bar */
 .bar-label {
     font-size: 0.8rem !important;
     color: var(--grey) !important;
@@ -641,7 +635,6 @@ footer {
     font-weight: 600 !important;
 }
 
-/* Statistics Pills Row */
 .citation-stats {
     display: flex !important;
     justify-content: space-between !important;
@@ -664,7 +657,7 @@ footer {
 @media (max-width: 768px) {
     .research-overview-grid {
         grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
     }
 }
-
 
